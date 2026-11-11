@@ -2,6 +2,7 @@ services:
   - type: web
     name: football-portfolio-backend
     runtime: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt && python manage.py migrate
     startCommand: gunicorn config.wsgi:application
@@ -16,3 +17,4 @@ services:
         value: .onrender.com
       - key: GITHUB_USERNAME
         value: said271275-hub
+
