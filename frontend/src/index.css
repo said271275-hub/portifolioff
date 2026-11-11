@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════
+   1. KATAKLI DAFTAR FON VA STIL (SCRAPBOOK THEME)
+   ══════════════════════════════════════════════ */
+:root {
+  --grid-line-color: rgba(30, 42, 90, 0.12);
+  --paper-bg: #F7F4EC;
+}
+
+.dark {
+  --grid-line-color: rgba(255, 255, 255, 0.08);
+  --paper-bg: #0d131f;
+}
+
+body {
+  background-color: var(--paper-bg);
+  background-image: 
+    linear-gradient(var(--grid-line-color) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid-line-color) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><circle cx='14' cy='14' r='12' fill='%23ffffff' stroke='%23111827' stroke-width='2'/><polygon points='14,7 9,11 11,17 17,17 19,11' fill='%23111827'/><line x1='14' y1='7' x2='14' y2='2' stroke='%23111827' stroke-width='1.5'/><line x1='9' y1='11' x2='4' y2='9' stroke='%23111827' stroke-width='1.5'/><line x1='19' y1='11' x2='24' y2='9' stroke='%23111827' stroke-width='1.5'/><line x1='11' y1='17' x2='8' y2='22' stroke='%23111827' stroke-width='1.5'/><line x1='17' y1='17' x2='20' y2='22' stroke='%23111827' stroke-width='1.5'/></svg>") 14 14, auto;
+}
+
+/* Tugmalar va linklar uchun kursor */
+a, button, input, select, textarea, [role="button"] {
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><circle cx='14' cy='14' r='13' fill='%23FACC15' stroke='%23000000' stroke-width='2.5'/><circle cx='14' cy='14' r='5' fill='%23EF4444'/></svg>") 14 14, pointer !important;
+}
+
+/* ══════════════════════════════════════════════
+   2. PERSPEKTIVALI FUTBOL MAYDONI POLI (3D PITCH FLOOR)
+   ══════════════════════════════════════════════ */
+.pitch-perspective-container {
+  perspective: 700px;
+  perspective-origin: 50% 25%;
+}
+
+.pitch-floor {
+  transform: rotateX(60deg);
+  transform-origin: top center;
+  background: 
+    linear-gradient(rgba(45, 122, 70, 0.85), rgba(31, 89, 50, 0.95)),
+    repeating-linear-gradient(90deg, #2d7a46 0, #2d7a46 60px, #256a3c 60px, #256a3c 120px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.dark .pitch-floor {
+  background: 
+    linear-gradient(rgba(18, 56, 31, 0.85), rgba(10, 28, 16, 0.95)),
+    repeating-linear-gradient(90deg, #1d542f 0, #1d542f 60px, #143d22 60px, #143d22 120px);
+}
+
+/* ══════════════════════════════════════════════
+   3. RANSOM-NOTE (GAZETA QIRQMASI HARFLAR)
+   ══════════════════════════════════════════════ */
+.ransom-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.9);
+  border: 2px solid #121212;
+  transition: transform 0.2s ease;
+}
+
+.ransom-letter:hover {
+  transform: scale(1.15) rotate(0deg) !important;
+}
+
+/* ══════════════════════════════════════════════
+   4. WASHI TAPE (SKOTCH LENTASI EFFEKTI)
+   ══════════════════════════════════════════════ */
+.washi-tape {
+  position: absolute;
+  height: 22px;
+  background-color: rgba(255, 235, 150, 0.75);
+  border-left: 2px dashed rgba(0, 0, 0, 0.15);
+  border-right: 2px dashed rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.washi-tape-blue {
+  background-color: rgba(147, 197, 253, 0.75);
+}
+
+.washi-tape-pink {
+  background-color: rgba(244, 114, 182, 0.75);
+}
+
+/* ══════════════════════════════════════════════
+   5. POLAROID VA RETRO KOMPYUTER USLUBLARI
+   ══════════════════════════════════════════════ */
+.polaroid-card {
+  background: #ffffff;
+  padding: 12px 12px 24px 12px;
+  box-shadow: 5px 8px 0px rgba(0, 0, 0, 0.85);
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.polaroid-card:hover {
+  box-shadow: 8px 14px 0px rgba(0, 0, 0, 0.95);
+  z-index: 30;
+}
+
+/* Qo'lda chizilgan qora ramkalar */
+.hand-drawn-border {
+  border: 2.5px solid #121212;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+/* Stadion projektor nurlari (Night mode) */
+.floodlight-beam {
+  background: radial-gradient(circle at top center, rgba(255, 250, 220, 0.25) 0%, transparent 70%);
+}
+
