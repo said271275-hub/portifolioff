@@ -11,8 +11,8 @@ import {
   fallbackStats
 } from './data/fallbackData';
 
-// API manzili (.env fayldan yoki standart lokal host)
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+// API manzili (.env fayldan yoki Renderdagi jonli backend)
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://football-portfolio-backend.onrender.com/api';
 
 /**
  * 1. O'yinchi profili ma'lumotlarini olish (/api/profile/)
@@ -20,7 +20,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api'
 export async function fetchProfile() {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4000); // 4 soniya timeout
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 soniya timeout (Render cold-start uchun)
 
     const response = await fetch(`${API_BASE_URL}/profile/`, {
       signal: controller.signal,
@@ -43,7 +43,7 @@ export async function fetchProfile() {
 export async function fetchProjects() {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
 
     const response = await fetch(`${API_BASE_URL}/projects/`, {
       signal: controller.signal,
@@ -66,7 +66,7 @@ export async function fetchProjects() {
 export async function fetchExperience() {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
 
     const response = await fetch(`${API_BASE_URL}/experience/`, {
       signal: controller.signal,
