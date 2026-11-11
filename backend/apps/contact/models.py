@@ -17,5 +17,6 @@ class ContactMessage(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"{self.name} - {self.email} ({'O\'qilgan' if self.is_read else 'Yangi'})"
+        status = "O'qilgan" if self.is_read else "Yangi"
+        return f"{self.name} - {self.email} ({status})"
 
