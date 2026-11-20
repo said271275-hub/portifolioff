@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "idCard": "ID Karta",
+    "skills": "Ko'nikmalar",
+    "projects": "Loyihalar",
+    "about": "Men haqimda",
+    "contact": "Bog'lanish"
+  },
+  "hero": {
+    "tagline": "Python/Django va React bilan Full-Stack dasturchi",
+    "subtitle": "Zamonaviy veb-ilovalar yarataman — backend kuchli, frontend chiroyli.",
+    "cta_projects": "Loyihalarni ko'rish",
+    "cta_contact": "Bog'lanish",
+    "drag_hint": "ID kartani torting! ⚽",
+    "role": "FULL-STACK DASTURCHI",
+    "location": "Guliston, O'zbekiston",
+    "age_label": "Yosh",
+    "birth_label": "Tug'ilgan sana"
+  },
+  "skills": {
+    "title": "TEXNIK STATISTIKA",
+    "subtitle": "⚽ Har bir texnologiya — sahnada bir mahorat.",
+    "pace": "Tezlik",
+    "shooting": "Aniqlik",
+    "passing": "Uzatma",
+    "dribbling": "Dribbling"
+  },
+  "projects": {
+    "title": "LOYIHALAR PAPKASI",
+    "subtitle": "📂 Haqiqiy loyihalar — har biri muammo va yechim bilan.",
+    "open_folder": "📂 Papkani ochish",
+    "close_folder": "📁 Papkani yopish",
+    "filter_all": "⚽ Barchasi",
+    "live": "Live",
+    "github": "GitHub",
+    "pinned": "🔥 Asosiy",
+    "count_label": "ta loyiha",
+    "problem": "Muammo",
+    "solution": "Yechim",
+    "loading": "Yuklanmoqda...",
+    "error": "Loyihalarni yuklashda xatolik."
+  },
+  "about": {
+    "title": "MEN HAQIMDA",
+    "subtitle": "19 yoshli Guliston dasturchisi — futbol maydonida ham, kod satrlarida ham g'olib."
+  },
+  "contact": {
+    "title": "BOG'LANISH",
+    "subtitle": "📢 Yangi g'oya yoki hamkorlik taklifi bormi? Yozing!",
+    "name": "Ismingiz",
+    "email": "Email manzilingiz",
+    "message": "Xabaringiz",
+    "name_placeholder": "Sarvar Rahimov",
+    "email_placeholder": "sarvar@example.com",
+    "message_placeholder": "Salom! Hamkorlik qilmoqchiman...",
+    "send": "Xabar yuborish ⚽",
+    "sending": "Yuborilmoqda...",
+    "success": "Gol! ⚽ Xabaringiz muvaffaqiyatli yuborildi!",
+    "error_generic": "Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.",
+    "direct_contact": "To'g'ridan-to'g'ri aloqa",
+    "total_visits": "Jami tashriflar",
+    "atmosphere": "Atmosfera"
+  },
+  "footer": {
+    "made_with": "❤️ va ⚽ bilan yaratildi",
+    "back_to_top": "Tepaga qaytish"
+  },
+  "audio": {
+    "mute": "Ovozni o'chirish",
+    "unmute": "Ovozni yoqish",
+    "whistle": "Hushtak"
+  },
+  "theme": {
+    "day": "Kunduzgi stadion",
+    "night": "Tungi stadion"
+  },
+  "lang": {
+    "switch": "EN"
+  }
+}

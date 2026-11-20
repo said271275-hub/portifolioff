@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "idCard": "ID Card",
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Full-Stack Developer with Python/Django & React",
+    "subtitle": "I build modern web apps — powerful backend, beautiful frontend.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Get In Touch",
+    "drag_hint": "Drag the ID card! ⚽",
+    "role": "FULL-STACK DEVELOPER",
+    "location": "Guliston, Uzbekistan",
+    "age_label": "Age",
+    "birth_label": "Date of Birth"
+  },
+  "skills": {
+    "title": "TECHNICAL STATS",
+    "subtitle": "⚽ Each technology — a skill on the pitch.",
+    "pace": "Pace",
+    "shooting": "Precision",
+    "passing": "Passing",
+    "dribbling": "Dribbling"
+  },
+  "projects": {
+    "title": "PROJECTS FOLDER",
+    "subtitle": "📂 Real projects — each with a problem & solution.",
+    "open_folder": "📂 Open Folder",
+    "close_folder": "📁 Close Folder",
+    "filter_all": "⚽ All",
+    "live": "Live",
+    "github": "GitHub",
+    "pinned": "🔥 Featured",
+    "count_label": "projects",
+    "problem": "Problem",
+    "solution": "Solution",
+    "loading": "Loading...",
+    "error": "Failed to load projects."
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "subtitle": "19-year-old Guliston developer — winner on the pitch and in code."
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "📢 Have a project idea or collaboration in mind? Write me!",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "name_placeholder": "John Smith",
+    "email_placeholder": "john@example.com",
+    "message_placeholder": "Hello! I'd like to work together...",
+    "send": "Send Message ⚽",
+    "sending": "Sending...",
+    "success": "Goal! ⚽ Your message was sent successfully!",
+    "error_generic": "Something went wrong. Please try again.",
+    "direct_contact": "Direct Contact",
+    "total_visits": "Total Visits",
+    "atmosphere": "Atmosphere"
+  },
+  "footer": {
+    "made_with": "Made with ❤️ and ⚽",
+    "back_to_top": "Back to Top"
+  },
+  "audio": {
+    "mute": "Mute Sound",
+    "unmute": "Unmute Sound",
+    "whistle": "Whistle"
+  },
+  "theme": {
+    "day": "Day Stadium",
+    "night": "Night Stadium"
+  },
+  "lang": {
+    "switch": "UZ"
+  }
+}
