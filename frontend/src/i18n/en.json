@@ -76,5 +76,24 @@
   },
   "lang": {
     "switch": "UZ"
+  },
+  "add_project": {
+    "button": "+ NEW PLAYER",
+    "title": "Add New Project",
+    "subtitle": "Add a new project to the transfer window",
+    "name": "Project Name",
+    "description": "Description",
+    "technologies": "Technologies",
+    "live_url": "Live URL",
+    "github_url": "GitHub URL",
+    "screenshot": "Screenshot URL (optional)",
+    "featured": "Mark as featured project",
+    "submit": "ADD PLAYER!",
+    "success": "Project added!",
+    "goal": "GOAL!",
+    "mine": "Mine",
+    "delete": "Delete",
+    "empty_hint": "No projects yet. Add your first player!",
+    "other_tech": "Other technology..."
   }
 }

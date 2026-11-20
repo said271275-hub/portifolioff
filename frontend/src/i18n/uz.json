@@ -76,5 +76,24 @@
   },
   "lang": {
     "switch": "EN"
+  },
+  "add_project": {
+    "button": "+ YANGI O'YINCHI",
+    "title": "Yangi loyiha qo'shish",
+    "subtitle": "Transfer oynasiga yangi loyiha qo'sh",
+    "name": "Loyiha nomi",
+    "description": "Tavsif",
+    "technologies": "Texnologiyalar",
+    "live_url": "Live URL",
+    "github_url": "GitHub URL",
+    "screenshot": "Skrinshot URL (ixtiyoriy)",
+    "featured": "Asosiy loyiha sifatida belgilash",
+    "submit": "O'YINCHINI QABUL QIL!",
+    "success": "Loyiha qo'shildi!",
+    "goal": "GOL!",
+    "mine": "Mening",
+    "delete": "O'chir",
+    "empty_hint": "Hozircha loyihalar yo'q. Birinchi o'yinchini qo'shing!",
+    "other_tech": "Boshqa texnologiya..."
   }
 }
