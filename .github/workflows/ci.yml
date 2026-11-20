@@ -1,0 +1,83 @@
+name: CI — Portfolio Build & Test
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  # ─── Frontend: Build + Lint ─────────────────────────────────────────────
+  frontend:
+    name: Frontend Build & Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout kodi
+        uses: actions/checkout@v4
+
+      - name: Node.js o'rnatish
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Bog'liqliklarni o'rnatish
+        run: npm ci
+
+      - name: ESLint tekshiruvi
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Production build
+        run: npm run build
+        env:
+          VITE_API_URL: https://football-portfolio-backend.onrender.com/api
+
+      - name: Build artefaktini saqlash
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+          retention-days: 7
+
+  # ─── Backend: Django Testlar ─────────────────────────────────────────────
+  backend:
+    name: Backend Django Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout kodi
+        uses: actions/checkout@v4
+
+      - name: Python o'rnatish
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Bog'liqliklarni o'rnatish
+        run: pip install -r requirements.txt
+
+      - name: Django testlarini ishga tushirish
+        run: python manage.py test tests --verbosity=2
+        env:
+          SECRET_KEY: test-secret-key-for-ci-only-not-production
+          DEBUG: 'True'
+          DATABASE_URL: ''
+          TELEGRAM_BOT_TOKEN: ''
+          TELEGRAM_CHAT_ID: ''
+
+      - name: Migratsiya tekshiruvi
+        run: python manage.py migrate --check
+        env:
+          SECRET_KEY: test-secret-key-for-ci-only-not-production
+          DEBUG: 'True'
